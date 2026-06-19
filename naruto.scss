@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #0b1320;
+  color: #f7f7f7;
+  font-family: Arial, sans-serif;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 20px;
+  background: #11192d;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: #ffcc4d;
+  color: #111;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+h1 {
+  margin: 0;
+  font-size: 18px;
+}
+
+main {
+  padding: 20px;
+}
+
+.episodes-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.episode-card {
+  display: grid;
+  place-items: center;
+  min-height: 56px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+
+}
+.vd-sections {
+  display: grid;
+  gap: 20px;
+}
+
+.vd-section,
+.default-section {
+  display: none;
+  padding: 22px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.vd-section:target {
+  display: block;
+}
+
+.default-section {
+  display: block;
+}
+
+@media (max-width: 1200px) {
+  .episodes-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .episodes-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .episodes-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .topbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

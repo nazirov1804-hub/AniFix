@@ -1,0 +1,555 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(1, 1, 31);
+  cursor: default;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+nav {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  background: linear-gradient(67deg, rgba(4, 4, 24, 0.808), rgba(4, 4, 24, 0.808));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 100000;
+  animation: top 2s ease forwards;
+  border-bottom: 1px solid gold;
+  box-shadow: 5px 5px 15px 0 rgba(70, 70, 133, 0.678);
+}
+nav .chap {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: left 3s ease forwards;
+}
+nav .chap #logo {
+  width: 140px;
+  position: relative;
+  left: 30px;
+}
+nav .chap h1 {
+  font-family: "Rye", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(64, 64, 255);
+  font-size: 40px;
+}
+nav .chap h1 span {
+  color: #8a0303;
+  font-weight: 700;
+  font-size: 30px;
+  position: relative;
+  left: 5px;
+  font-family: "Rubik Wet Paint", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+nav .orta {
+  width: 28%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .orta a {
+  text-decoration: none;
+  color: #b8b8ff;
+  font-size: 18px;
+  transition: all 0.4s ease;
+}
+nav .orta a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(138, 99, 255, 0.6);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+nav .ong {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  animation: right 3s ease forwards;
+}
+nav .ong #kirish {
+  background-color: #ffffff;
+  background-color: #4a90d9;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  width: 100px;
+  height: 50px;
+  font-size: 16px;
+}
+nav .ong #kirish:hover {
+  background-color: #3a75b3;
+  transform: translateY(-2px);
+}
+nav .ong #otish {
+  width: 180px;
+  height: 50px;
+  background: none;
+  border: 1px solid #3a75b3;
+  color: #ffffff;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+  color: #3a75b3;
+}
+nav .ong #otish:hover {
+  background-color: #3a75b3;
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+.sah {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.sah .chap {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding-left: 200px;
+  gap: 20px;
+  padding-top: 200px;
+  animation: right2 3s ease forwards;
+}
+.sah .chap .tep {
+  width: 300px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid gold;
+  color: gold;
+  position: relative;
+  left: 100px;
+  bottom: 50px;
+  font-size: 15px;
+}
+.sah .chap .orta {
+  width: 60%;
+}
+.sah .chap .orta h1 {
+  font-size: 50px;
+  color: rgb(231, 231, 231);
+}
+.sah .chap .orta p {
+  font-size: 20px;
+  color: rgb(198, 198, 255);
+}
+.sah .chap .past {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sah .chap .past #bosh {
+  width: 180px;
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  background-color: #3a75b3;
+  color: #ffffff;
+  font-size: 16px;
+  transition: all 0.4s ease;
+}
+.sah .chap .past #bosh:hover {
+  background-color: #347ac5;
+  transform: translateY(-2px);
+}
+.sah .chap .past .pas {
+  display: flex;
+  justify-content: space-between;
+  height: 120px;
+  width: 450px;
+  align-items: center;
+}
+.sah .chap .past .pas .yoz {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.sah .chap .past .pas .yoz h1 {
+  color: #fff;
+}
+.sah .chap .past .pas .yoz p {
+  color: rgb(186, 186, 255);
+}
+.sah .tepa {
+  position: relative;
+  height: 480px;
+  width: 50%;
+  left: 100px;
+  max-width: 480px;
+  animation: left2 3s ease forwards;
+}
+.sah .tepa .crad1#bir {
+  position: absolute;
+  width: 200px;
+  height: 280px;
+  border-radius: 14px;
+  background: linear-gradient(160deg, #1b1b3a, #0d0d24);
+  border: 1px solid rgba(184, 184, 255, 0.15);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  cursor: pointer;
+  top: 0;
+  left: 40px;
+  transform: rotate(-6deg);
+  z-index: 2;
+}
+.sah .tepa .crad1#bir .rasm {
+  height: 65%;
+  overflow: hidden;
+}
+.sah .tepa .crad1#bir .rasm img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  border-radius: 14px 14px 0 0;
+}
+.sah .tepa .crad1#bir .past44 {
+  padding: 14px;
+}
+.sah .tepa .crad1#bir .past44 .adv {
+  font-size: 11px;
+  color: #ff8a65;
+  letter-spacing: 1px;
+}
+.sah .tepa .crad1#bir .past44 h4 {
+  font-size: 15px;
+  margin-top: 6px;
+  color: #f0f0f5;
+}
+.sah .tepa .crad1#bir .past44 .qism {
+  font-size: 12px;
+  color: #7777a0;
+  margin-top: 4px;
+}
+.sah .tepa .crad1#bir:hover {
+  z-index: 10;
+  transform: scale(1.12) rotate(0deg);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(184, 184, 255, 0.3);
+  border: 1px solid rgba(184, 184, 255, 0.4);
+}
+.sah .tepa .card1#ikki {
+  position: absolute;
+  width: 200px;
+  height: 280px;
+  border-radius: 14px;
+  background: linear-gradient(160deg, #1b1b3a, #0d0d24);
+  border: 1px solid rgba(184, 184, 255, 0.15);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  cursor: pointer;
+  top: 60px;
+  left: 200px;
+  transform: rotate(6deg);
+  z-index: 3;
+}
+.sah .tepa .card1#ikki .rasm {
+  height: 65%;
+  overflow: hidden;
+}
+.sah .tepa .card1#ikki .rasm img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  border-radius: 14px 14px 0 0;
+}
+.sah .tepa .card1#ikki .past44 {
+  padding: 14px;
+}
+.sah .tepa .card1#ikki .past44 .adv {
+  font-size: 11px;
+  color: #ff8a65;
+  letter-spacing: 1px;
+}
+.sah .tepa .card1#ikki .past44 h4 {
+  font-size: 15px;
+  margin-top: 6px;
+  color: #f0f0f5;
+}
+.sah .tepa .card1#ikki .past44 .qism {
+  font-size: 12px;
+  color: #7777a0;
+  margin-top: 4px;
+}
+.sah .tepa .card1#ikki:hover {
+  z-index: 10;
+  transform: scale(1.12) rotate(0deg);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(184, 184, 255, 0.3);
+  border: 1px solid rgba(184, 184, 255, 0.4);
+}
+.sah .tepa .card1#uch {
+  position: absolute;
+  width: 200px;
+  height: 280px;
+  border-radius: 14px;
+  background: linear-gradient(160deg, #1b1b3a, #0d0d24);
+  border: 1px solid rgba(184, 184, 255, 0.15);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  cursor: pointer;
+  top: 160px;
+  left: 30px;
+  transform: rotate(8deg);
+  z-index: 1;
+}
+.sah .tepa .card1#uch .rasm {
+  height: 65%;
+  overflow: hidden;
+}
+.sah .tepa .card1#uch .rasm img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  border-radius: 14px 14px 0 0;
+}
+.sah .tepa .card1#uch .past44 {
+  padding: 14px;
+}
+.sah .tepa .card1#uch .past44 .adv {
+  font-size: 11px;
+  color: #ff8a65;
+  letter-spacing: 1px;
+}
+.sah .tepa .card1#uch .past44 h4 {
+  font-size: 15px;
+  margin-top: 6px;
+  color: #f0f0f5;
+}
+.sah .tepa .card1#uch .past44 .qism {
+  font-size: 12px;
+  color: #7777a0;
+  margin-top: 4px;
+}
+.sah .tepa .card1#uch:hover {
+  z-index: 10;
+  transform: scale(1.12) rotate(0deg);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(184, 184, 255, 0.3);
+  border: 1px solid rgba(184, 184, 255, 0.4);
+}
+
+img {
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+.haq {
+  width: 100%;
+  height: 90vh;
+  margin-top: 160px;
+  cursor: default;
+}
+.haq .tepa {
+  width: 100%;
+  height: 18vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.haq .tepa .tep {
+  width: 200px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  border: 2px solid rgb(252, 224, 69);
+  color: rgb(252, 224, 69);
+}
+.haq .tepa .pas {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.haq .tepa .pas h1 {
+  font-size: 50px;
+  position: relative;
+  bottom: 10px;
+  color: #ffffff;
+}
+.haq .tepa .pas p {
+  font-size: 18px;
+  color: #9393af;
+}
+.haq .orta2 {
+  margin-top: 70px;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.haq .orta2 .chap {
+  background: linear-gradient(65deg, rgba(118, 118, 202, 0.267), rgba(28, 28, 155, 0.075));
+  width: 370px;
+  height: 220px;
+  border: 1px solid rgb(101, 101, 248);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.haq .orta2 .chap .tepaa {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, rgba(101, 101, 245, 0.199));
+  border-radius: 12px;
+  color: #b8b8ff;
+  font-size: 22px;
+  position: relative;
+  left: 40px;
+  bottom: 20px;
+}
+.haq .orta2 .chap .orta3 {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+  color: #fff;
+}
+.haq .orta2 .chap .past3 {
+  width: 80%;
+  position: relative;
+  left: 40px;
+  font-size: 15px;
+  color: #9999aa;
+}
+.haq .past2 {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+.haq .past2 .tep4 {
+  font-size: 25px;
+  color: #f0f0f5;
+}
+.haq .past2 .pas {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  height: 100px;
+  align-items: center;
+}
+.haq .past2 .pas .bir {
+  background: linear-gradient(90deg, rgba(118, 118, 245, 0.116));
+  width: 150px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  border: 1px solid rgb(101, 101, 248);
+  color: #7171a0;
+  transition: all 0.5s ease;
+  cursor: default;
+}
+.haq .past2 .pas .bir:hover {
+  background-color: rgba(118, 118, 245, 0.116);
+}
+
+@keyframes top {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes left {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes right {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes left2 {
+  from {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes right2 {
+  from {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}/*# sourceMappingURL=ANISPACE.css.map */
